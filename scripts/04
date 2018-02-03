@@ -1,0 +1,12 @@
+if [ ! -f /var/log/crontab_sum ]
+then
+	touch /var/log/crontab_sum	
+fi
+
+oldhash="$(cat /var/log/crontab_sum)"
+curhash="$(md5sum /etc/crontab | cut -d' ' -f1)"
+if [ "$curhash" != "$oldhash" ]
+then
+	echo "old: $oldhash current: $curhash" | mail -s "/etc/crontab modified" root 
+	echo "$curhash" > /var/log/crontab_sum
+fi
