@@ -1,1 +1,1 @@
-~/.ssh/id_rsa (cles prives) et ~/.ssh/id_rsa.pub (cles publiques)
+~/.ssh/authorized_keys
