@@ -1,1 +1,9 @@
-Avec le DNS local, on a aussi un accès direct au serveur 42.fr par ip locale car le serveur est sur le même réseau que les macs de l'école.
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	42.fr
+Address: 163.172.250.11
+Name:	42.fr
+Address: 163.172.250.12
+
